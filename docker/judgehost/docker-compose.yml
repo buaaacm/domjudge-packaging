@@ -1,0 +1,14 @@
+version: "3"
+services:
+    judgehost:
+        image: "domjudge/judgehost:latest"
+        environment:
+            DOMSERVER_BASEURL: https://pre.bcpc.buaaacm.com/
+            JUDGEDAEMON_USERNAME: judgehost
+            JUDGEDAEMON_PASSWORD: bhcYj7Dv2zZWirUG
+            DAEMON_ID: 0
+            CONTAINER_TIMEZONE: Asia/Shanghai
+        privileged: true
+        volumes:
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
