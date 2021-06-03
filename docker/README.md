@@ -21,8 +21,9 @@ These containers do not include MySQL / MariaDB; the [MariaDB](https://hub.docke
 Add `build_docker.sh` to build `docker` and `docker-compose`. Usage:
 
 - Enter `domserver` directory or `judgehost` directory
+- Run `judgehost_init.sh`
 - Modify `url`, `username`, `password`, etc.
-- Run `docker-compose up -d`.
+- Run `docker-compose up -d`
 
 #### Table of Contents
 - [DOMjudge Docker containers](#domjudge-docker-containers)
