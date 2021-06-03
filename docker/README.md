@@ -16,17 +16,25 @@ The judgehost container contains a working judgehost with cgroup support and a c
 
 These containers do not include MySQL / MariaDB; the [MariaDB](https://hub.docker.com/r/_/mariadb/) Docker container does this better than we ever could.
 
+## Update by zzzzzzh
+
+Add `build_docker.sh` to build `docker` and `docker-compose`.
+Enter `domserver` directory or `judgehost` directory, and run `docker-compose up -d`.
+
 #### Table of Contents
-- [Using the images](#using-the-images)
-  - [MariaDB container](#mariadb-container)
-  - [DOMserver container](#domserver-container)
-    - [Environment variables](#environment-variables)
-    - [Passwords through files](#passwords-through-files)
-    - [Commands](#commands)
-  - [Judgehost container](#judgehost-container)
-    - [Environment variables](#environment-variables)
-    - [Example AWS Setup](#example-aws-setup)
-- [Building the images](#building-the-images)
+- [DOMjudge Docker containers](#domjudge-docker-containers)
+  - [Update by zzzzzzh](#update-by-zzzzzzh)
+      - [Table of Contents](#table-of-contents)
+  - [Using the images](#using-the-images)
+    - [MariaDB container](#mariadb-container)
+    - [DOMserver container](#domserver-container)
+      - [Environment variables](#environment-variables)
+      - [Passwords through files](#passwords-through-files)
+      - [Commands](#commands)
+    - [Judgehost container](#judgehost-container)
+      - [Environment variables](#environment-variables-1)
+      - [Example AWS Setup](#example-aws-setup)
+  - [Building the images](#building-the-images)
 
 ## Using the images
 
