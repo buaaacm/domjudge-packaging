@@ -5,7 +5,7 @@ services:
         environment:
             DOMSERVER_BASEURL: https://pre.bcpc.buaaacm.com/
             JUDGEDAEMON_USERNAME: judgehost
-            JUDGEDAEMON_PASSWORD: bhcYj7Dv2zZWirUG
+            JUDGEDAEMON_PASSWORD: password
             DAEMON_ID: 0
             CONTAINER_TIMEZONE: Asia/Shanghai
         privileged: true
