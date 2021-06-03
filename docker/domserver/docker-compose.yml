@@ -1,0 +1,19 @@
+version: "3"
+services:
+    domserver:
+        image: "toxtricity/domserver:v2"
+        ports:
+            - "10243:80"
+        environment:
+            MYSQL_PASSWORD: domjudge
+            MYSQL_ROOT_PASSWORD: domjudge
+    mariadb:
+        image: "docker.io/library/mariadb:10.5"
+        # command: --max_allowed_packet=67108864
+        environment:
+            MYSQL_USER: domjudge
+            MYSQL_DATABASE: domjudge
+            MYSQL_PASSWORD: domjudge
+            MYSQL_ROOT_PASSWORD: domjudge
+        volumes:
+            - /data/mysql:/var/lib/mysql
