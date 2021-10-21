@@ -1,19 +1,21 @@
 version: "3"
 services:
     domserver:
-        image: "toxtricity/domserver:v2"
+        image: "toxtricity/domserver:v3"
         ports:
-            - "10243:80"
+            - "YOUR_PORT:80"
         environment:
-            MYSQL_PASSWORD: domjudge
-            MYSQL_ROOT_PASSWORD: domjudge
+            MYSQL_PASSWORD: YOUR_MYSQL_PASSWORD
+            MYSQL_ROOT_PASSWORD: YOUR_MYSQL_ROOT_PASSWORD
+            CONTAINER_TIMEZONE: YOUR/TIME_ZONE
     mariadb:
         image: "docker.io/library/mariadb:10.5"
+        # If you have a huge **single** test case, setup this command
         # command: --max_allowed_packet=67108864
         environment:
             MYSQL_USER: domjudge
             MYSQL_DATABASE: domjudge
-            MYSQL_PASSWORD: domjudge
-            MYSQL_ROOT_PASSWORD: domjudge
+            MYSQL_PASSWORD: YOUR_MYSQL_PASSWORD
+            MYSQL_ROOT_PASSWORD: YOUR_MYSQL_ROOT_PASSWORD
         volumes:
-            - /data/mysql:/var/lib/mysql
+            - /YOUR/HOST/DATA/PATH:/var/lib/mysql
