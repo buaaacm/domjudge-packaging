@@ -40,7 +40,6 @@ Add `build_docker.sh` to build `docker` and `docker-compose`. Usage:
     - [Example AWS Setup](#example-aws-setup)
 - [Building the images](#building-the-images)
 - [Customizing the image](#customizing-the-image)
->>>>>>> master
 
 ## Using the images
 
