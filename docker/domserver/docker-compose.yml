@@ -7,9 +7,10 @@ services:
         environment:
             MYSQL_PASSWORD: YOUR_MYSQL_PASSWORD
             MYSQL_ROOT_PASSWORD: YOUR_MYSQL_ROOT_PASSWORD
+            MYSQL_HOST: YOUR_MYSQL_CONTAINER_NAME
             CONTAINER_TIMEZONE: YOUR/TIME_ZONE
-    mariadb:
-        image: "docker.io/library/mariadb:10.5"
+    YOUR_MYSQL_CONTAINER_NAME:
+        image: "mysql:5.7.36"
         # If you have a huge **single** test case, setup this command
         # command: --max_allowed_packet=67108864
         environment:
