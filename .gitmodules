@@ -1,0 +1,3 @@
+[submodule "docker/domjudge"]
+	path = docker/domjudge
+	url = git@github.com:buaaacm/domjudge.git

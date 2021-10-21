@@ -1,5 +1,5 @@
-FROM debian:stable-slim AS domserver-build
-MAINTAINER DOMjudge team <team@domjudge.org>
+FROM debian:11.1-slim AS domserver-build
+MAINTAINER Zihao Zhong <zhongzihao2357@gmail.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -17,6 +17,7 @@ RUN apt-get update \
 	texlive-fonts-recommended texlive-lang-european latexmk \
 	libcurl4-gnutls-dev libjsoncpp-dev libmagic-dev \
 	enscript lpr ca-certificates \
+    bats \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Needed for building the docs
@@ -31,15 +32,15 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 	&& mv /composer.phar /usr/local/bin/composer
 
 # Add DOMjudge source code and build script
-ADD domjudge.tar.gz /domjudge-src
+COPY domjudge /domjudge-src
 COPY domserver/build.sh /domjudge-src/build.sh
 
 # Build and install domserver
 RUN /domjudge-src/build.sh
 
 # Now create an image with the actual build in it
-FROM debian:stable-slim
-MAINTAINER DOMjudge team <team@domjudge.org>
+FROM debian:11.1-slim
+MAINTAINER Zihao Zhong <zhongzihao2357@gmail.com>
 
 ENV DEBIAN_FRONTEND=noninteractive \
 	CONTAINER_TIMEZONE=Europe/Amsterdam \
