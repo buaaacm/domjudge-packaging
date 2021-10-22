@@ -3,9 +3,9 @@ services:
     judgehost:
         image: "domjudge/judgehost:latest"
         environment:
-            DOMSERVER_BASEURL: https://pre.bcpc.buaaacm.com/
+            DOMSERVER_BASEURL: YOUR_DOMSERVER_BASEURL
             JUDGEDAEMON_USERNAME: judgehost
-            JUDGEDAEMON_PASSWORD: password
+            JUDGEDAEMON_PASSWORD: YOUR_JUDGEHOST_PASSWORD
             DAEMON_ID: 0
             CONTAINER_TIMEZONE: Asia/Shanghai
         privileged: true
