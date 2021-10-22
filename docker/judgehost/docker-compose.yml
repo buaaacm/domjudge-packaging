@@ -2,6 +2,7 @@ version: "3"
 services:
     judgehost:
         image: "domjudge/judgehost:latest"
+        restart: unless-stopped
         environment:
             DOMSERVER_BASEURL: YOUR_DOMSERVER_BASEURL
             JUDGEDAEMON_USERNAME: judgehost
