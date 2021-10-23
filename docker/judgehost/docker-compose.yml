@@ -12,4 +12,6 @@ services:
         privileged: true
         volumes:
             - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        extra_hosts:
+            - "YOUR_DOMSERVER_DOMAIN:YOUR_DOMSERVER_PRIVATE_IP"
 
