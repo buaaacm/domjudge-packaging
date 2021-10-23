@@ -43,8 +43,8 @@ FROM debian:11.1-slim
 MAINTAINER Zihao Zhong <zhongzihao2357@gmail.com>
 
 ENV DEBIAN_FRONTEND=noninteractive \
-	CONTAINER_TIMEZONE=Europe/Amsterdam \
-	MYSQL_HOST=mariadb \
+	CONTAINER_TIMEZONE=Asia/Shanghai \
+	MYSQL_HOST=mysql \
 	MYSQL_USER=domjudge \
 	MYSQL_DATABASE=domjudge \
 	MYSQL_PASSWORD=domjudge \
