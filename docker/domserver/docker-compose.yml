@@ -1,7 +1,7 @@
 version: "3"
 services:
     domserver:
-        image: "toxtricity/domserver:v3"
+        image: "toxtricity/domserver:bcpc-special-register"
         restart: unless-stopped
         ports:
             - "YOUR_PORT:80"
