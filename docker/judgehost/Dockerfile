@@ -1,8 +1,8 @@
-FROM debian:stable
-MAINTAINER DOMjudge team <team@domjudge.org>
+FROM debian:11.1
+MAINTAINER Zihao Zhong <zhongzihao2357@gmail.com>
 
 ENV DEBIAN_FRONTEND=noninteractive \
-	CONTAINER_TIMEZONE=Europe/Amsterdam \
+	CONTAINER_TIMEZONE=Asia/Shanghai \
 	DOMSERVER_BASEURL=http://domserver/ \
 	JUDGEDAEMON_USERNAME=judgehost \
 	JUDGEDAEMON_PASSWORD=password \
@@ -16,7 +16,7 @@ RUN apt-get update \
 	dumb-init \
 	acl zip unzip supervisor sudo procps libcgroup1 \
 	php-cli php-zip php-gd php-curl php-mysql php-json \
-	php-gmp php-xml php-mbstring python3 \
+	php-gmp php-xml php-mbstring python3 pypy3 \
 	gcc g++ default-jre-headless default-jdk ghc fp-compiler \
 	&& rm -rf /var/lib/apt/lists/*
 
