@@ -1,7 +1,7 @@
 version: "3"
 services:
     judgehost:
-        image: "toxtricity/judgehost:bcpc"
+        image: "registry.cn-beijing.aliyuncs.com/toxtricity/judgehost:bcpc"
         restart: unless-stopped
         environment:
             DOMSERVER_BASEURL: YOUR_DOMSERVER_BASEURL
