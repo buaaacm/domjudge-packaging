@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Add packages with -i "<apt package name>" here
-/opt/domjudge/judgehost/bin/dj_make_chroot_docker -i domjudge/default-judgehost-chroot:7.3.3
+/opt/domjudge/judgehost/bin/dj_make_chroot_docker -i registry.cn-beijing.aliyuncs.com/toxtricity/default-judgehost-chroot:bcpc
 
 cd /
 echo "[..] Compressing chroot"
