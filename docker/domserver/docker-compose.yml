@@ -10,6 +10,7 @@ services:
             MYSQL_ROOT_PASSWORD: YOUR_MYSQL_ROOT_PASSWORD
             MYSQL_HOST: YOUR_MYSQL_CONTAINER_NAME
             CONTAINER_TIMEZONE: YOUR/TIME_ZONE
+            BEIAN_CONTENT: 京ICP备20018844号-2
     YOUR_MYSQL_CONTAINER_NAME:
         image: "mysql:5.7.36"
         restart: unless-stopped
