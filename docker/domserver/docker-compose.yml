@@ -13,8 +13,8 @@ services:
     YOUR_MYSQL_CONTAINER_NAME:
         image: "mysql:5.7.36"
         restart: unless-stopped
-        # If you have a huge **single** test case, setup this command
-        # command: --max_allowed_packet=67108864
+        # If you have a huge **single** test case, setup max_allowed_packet
+        command: --max-connections=1000 --max_allowed_packet=512M
         environment:
             MYSQL_USER: domjudge
             MYSQL_DATABASE: domjudge
