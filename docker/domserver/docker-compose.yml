@@ -14,7 +14,8 @@ services:
     YOUR_MYSQL_CONTAINER_NAME:
         image: "mysql:5.7.36"
         restart: unless-stopped
-        # If you have a huge **single** test case, setup max_allowed_packet
+        # If you have a huge **single** test case, setup max_allowed_packet and innodb-log-file-size
+        # innodb-log-file-size is at least 10 times bigger than the largest test case
         command: --max-connections=1000 --max_allowed_packet=512M
         environment:
             MYSQL_USER: domjudge
